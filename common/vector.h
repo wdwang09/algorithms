@@ -5,10 +5,10 @@
 #include <iostream>
 #include <random>
 
-std::vector<int> random_int_vector() {
+std::vector<int> random_int_vector(int upper_bound = 100) {
   std::random_device r;
   std::default_random_engine e(r());
-  std::uniform_int_distribution<int> uniform_dist(0, 100);
+  std::uniform_int_distribution<int> uniform_dist(0, upper_bound);
   std::vector<int> v(uniform_dist(e));
   std::generate(v.begin(), v.end(),
                 [&uniform_dist, &e] { return uniform_dist(e); });
@@ -29,7 +29,7 @@ std::ostream& operator<<(std::ostream& os, const std::vector<T>& v) {
 }
 
 template <typename T>
-bool test_eq(const std::vector<T>& a, const std::vector<T>& b) {
+bool test_eq(const T& a, const T& b) {
   if (a == b) {
     return true;
   }

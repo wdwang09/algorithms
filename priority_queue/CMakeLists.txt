@@ -1,0 +1,2 @@
+add_executable(priority_queue_test priority_queue_test.cpp)
+add_test(NAME priority_queue_test COMMAND priority_queue_test)
