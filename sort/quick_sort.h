@@ -4,33 +4,30 @@
 
 #include <vector>
 
-using std::size_t;
-using std::vector;
-
 namespace {
 
 template <typename T>
-void q_sort(vector<T> &v, size_t begin, size_t end);
+void q_sort(std::vector<T> &v, std::size_t begin, std::size_t end);
 
 template <typename T>
-size_t q_partition(vector<T> &v, size_t begin, size_t end);
+std::size_t q_partition(std::vector<T> &v, std::size_t begin, std::size_t end);
 
 template <typename T>
-void quick_sort(vector<T> &v) {
+void quick_sort(std::vector<T> &v) {
   q_sort(v, 0, v.size());
 }
 
 template <typename T>
-void q_sort(vector<T> &v, size_t begin, size_t end) {
+void q_sort(std::vector<T> &v, std::size_t begin, std::size_t end) {
   if (begin >= end) return;
-  size_t idx = q_partition(v, begin, end);
+  std::size_t idx = q_partition(v, begin, end);
   q_sort(v, begin, idx);
   q_sort(v, idx + 1, end);
 }
 
 template <typename T>
-size_t q_partition(vector<T> &v, size_t begin, size_t end) {
-  size_t low = begin, high = end - 1;
+std::size_t q_partition(std::vector<T> &v, std::size_t begin, std::size_t end) {
+  std::size_t low = begin, high = end - 1;
   auto pivot = v[high];
   do {
     while (low < high && v[low] <= pivot) ++low;
@@ -53,28 +50,28 @@ size_t q_partition(vector<T> &v, size_t begin, size_t end) {
 namespace quick_sort_2 {
 
 template <typename T>
-void q_sort(vector<T> &v, size_t begin, size_t end);
+void q_sort(std::vector<T> &v, std::size_t begin, std::size_t end);
 
 template <typename T>
-size_t q_partition(vector<T> &v, size_t begin, size_t end);
+std::size_t q_partition(std::vector<T> &v, std::size_t begin, std::size_t end);
 
 template <typename T>
-void quick_sort(vector<T> &v) {
+void quick_sort(std::vector<T> &v) {
   q_sort(v, 0, v.size());
 }
 
 template <typename T>
-void q_sort(vector<T> &v, size_t begin, size_t end) {
+void q_sort(std::vector<T> &v, std::size_t begin, std::size_t end) {
   if (begin >= end) return;
-  size_t idx = q_partition(v, begin, end);
+  std::size_t idx = q_partition(v, begin, end);
   q_sort(v, begin, idx);
   q_sort(v, idx + 1, end);
 }
 
 template <typename T>
-size_t q_partition(vector<T> &v, size_t begin, size_t end) {
-  size_t low = begin;
-  for (size_t high = begin; high < end - 1; ++high) {
+std::size_t q_partition(std::vector<T> &v, std::size_t begin, std::size_t end) {
+  std::size_t low = begin;
+  for (auto high = begin; high < end - 1; ++high) {
     if (v[high] <= v[end - 1]) {
       std::swap(v[low], v[high]);
       ++low;

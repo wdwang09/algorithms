@@ -1,0 +1,2 @@
+add_executable(disjoint_set_test disjoint_set_test.cpp)
+add_test(NAME disjoint_set_test COMMAND disjoint_set_test)

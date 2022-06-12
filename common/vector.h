@@ -26,5 +26,5 @@ void assert_vector_eq(const std::vector<T>& a, const std::vector<T>& b) {
   std::cout << common::join(" ", a.begin(), a.end()) << std::endl;
   std::cout << common::join(" ", b.begin(), b.end()) << std::endl;
   std::cout << "===============" << std::endl;
-  throw std::runtime_error("NOT EQUAL");
+  MY_ASSERT(false);
 }

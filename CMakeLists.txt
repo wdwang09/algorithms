@@ -11,5 +11,6 @@ enable_testing()
 
 include_directories(common)
 
+add_subdirectory(disjoint_set)
 add_subdirectory(priority_queue)
 add_subdirectory(sort)
