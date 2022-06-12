@@ -26,7 +26,7 @@ int main() {
     std::priority_queue<int> stl_pq_less(v.begin(), v.end());
     auto stl_res_less = get_int_queue(stl_pq_less);
 
-    assert(test_eq(res_less, stl_res_less));
+    assert_vector_eq(res_less, stl_res_less);
 
     // ===
 
@@ -38,6 +38,6 @@ int main() {
         v.begin(), v.end());
     auto stl_res_greater = get_int_queue(stl_pq_greater);
 
-    assert(test_eq(res_greater, stl_res_greater));
+    assert_vector_eq(res_greater, stl_res_greater);
   }
 }

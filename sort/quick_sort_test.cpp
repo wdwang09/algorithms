@@ -1,6 +1,6 @@
 #include "quick_sort.h"
 
-#include <cassert>
+#include <vector>
 
 #include "vector.h"
 
@@ -12,8 +12,8 @@ int main() {
     quick_sort(v1);
     quick_sort_2::quick_sort(v2);
     std::sort(v_gt.begin(), v_gt.end());
-    assert(test_eq(v1, v_gt));
-    assert(test_eq(v2, v_gt));
+    assert_vector_eq(v1, v_gt);
+    assert_vector_eq(v2, v_gt);
   }
   return 0;
 }

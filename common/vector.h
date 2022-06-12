@@ -1,9 +1,11 @@
 #pragma once
 
 #include <algorithm>
-#include <cassert>
 #include <iostream>
 #include <random>
+#include <stdexcept>
+
+#include "common.h"
 
 std::vector<int> random_int_vector(int upper_bound = 100) {
   std::random_device r;
@@ -16,26 +18,13 @@ std::vector<int> random_int_vector(int upper_bound = 100) {
 }
 
 template <typename T>
-std::ostream& operator<<(std::ostream& os, const std::vector<T>& v) {
-  os << '[';
-  for (auto it = v.begin(); it != v.end(); ++it) {
-    if (it != v.begin()) {
-      os << ' ';
-    }
-    os << *it;
-  }
-  os << ']';
-  return os;
-}
-
-template <typename T>
-bool test_eq(const T& a, const T& b) {
+void assert_vector_eq(const std::vector<T>& a, const std::vector<T>& b) {
   if (a == b) {
-    return true;
+    return;
   }
   std::cout << "=== FAIL EQ ===" << std::endl;
-  std::cout << a << std::endl;
-  std::cout << b << std::endl;
+  std::cout << common::join(" ", a.begin(), a.end()) << std::endl;
+  std::cout << common::join(" ", b.begin(), b.end()) << std::endl;
   std::cout << "===============" << std::endl;
-  return false;
+  throw std::runtime_error("NOT EQUAL");
 }
