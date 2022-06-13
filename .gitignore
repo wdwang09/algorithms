@@ -4,7 +4,8 @@ tmp
 
 build
 cmake-build-*
-Testing
+out
 
 .idea
+.vs
 .vscode
