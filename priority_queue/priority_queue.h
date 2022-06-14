@@ -1,4 +1,5 @@
 // https://en.cppreference.com/w/cpp/container/priority_queue
+// https://en.wikipedia.org/wiki/Binary_heap
 
 #pragma once
 

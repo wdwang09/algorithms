@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(Algorithms)
+project(Algorithms LANGUAGES CXX)
 
 if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Debug)
@@ -14,5 +14,6 @@ include_directories(common)
 
 add_subdirectory(binary_tree)
 add_subdirectory(disjoint_set)
+add_subdirectory(graph)
 add_subdirectory(priority_queue)
 add_subdirectory(sort)

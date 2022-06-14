@@ -47,6 +47,7 @@ int main() {
   std::uniform_int_distribution<int> rnd2(0, 100);
   for (int i = 0; i < 20; ++i) {
     std::vector<Element> el_v1;
+    el_v1.reserve(50);
     for (int j = 0; j < 50; ++j) {
       el_v1.emplace_back(rnd1(e), rnd2(e));
     }
