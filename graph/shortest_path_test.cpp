@@ -1,7 +1,8 @@
 #include "shortest_path.h"
 
-#include <vector>
+#include <climits>
 #include <map>
+#include <vector>
 
 #include "common.h"
 #include "common/graph.h"

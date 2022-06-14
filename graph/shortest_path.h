@@ -3,6 +3,7 @@
 #pragma once
 
 #include <algorithm>
+#include <climits>
 #include <functional>
 #include <map>
 #include <memory>

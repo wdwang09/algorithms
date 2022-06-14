@@ -1,5 +1,6 @@
 #include "traversal.h"
 
+#include <climits>
 #include <memory>
 #include <vector>
 
