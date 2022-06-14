@@ -1,2 +1,5 @@
 add_executable(minimum_spanning_tree_test minimum_spanning_tree_test.cpp)
 add_test(NAME minimum_spanning_tree_test COMMAND minimum_spanning_tree_test)
+
+add_executable(shortest_path_test shortest_path_test.cpp)
+add_test(NAME shortest_path_test COMMAND shortest_path_test)

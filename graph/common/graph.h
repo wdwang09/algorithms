@@ -17,7 +17,7 @@ class Graph {
   bool add_edge(std::size_t u, std::size_t v, const WeightType& w) {
     if (u >= V() || v >= V()) return false;
     adjacency_list_.at(u).emplace(v, w);
-    if (!is_directed_) {
+    if (!is_directed_ && u != v) {
       adjacency_list_.at(v).emplace(u, w);
     }
     ++edge_num_;
