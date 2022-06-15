@@ -14,7 +14,10 @@ int main() {
     std::size_t edge_num = 0;
     for (int i = 0; i < node_num; ++i) {
       for (int j = 0; j < node_num; ++j) {
-        if (common::randint(0, 5) != 0) continue;
+        if (common::randint(0, 3) != 0) continue;
+        g.add_edge(i, j, common::randint(0, 40));
+        ++edge_num;
+        if (common::randint(0, 3) != 0) continue;
         g.add_edge(i, j, common::randint(0, 40));
         ++edge_num;
       }
@@ -54,7 +57,10 @@ int main() {
     std::size_t edge_num = 0;
     for (int i = 0; i < node_num; ++i) {
       for (int j = 0; j < node_num; ++j) {
-        if (common::randint(0, 5) != 0) continue;
+        if (common::randint(0, 3) != 0) continue;
+        g.add_edge(i, j, common::randint(0, 40));
+        ++edge_num;
+        if (common::randint(0, 3) != 0) continue;
         g.add_edge(i, j, common::randint(0, 40));
         ++edge_num;
       }

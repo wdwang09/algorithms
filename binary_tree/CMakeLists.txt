@@ -1,2 +1,5 @@
 add_executable(binary_tree_traversal_test traversal_test.cpp)
 add_test(NAME binary_tree_traversal_test COMMAND binary_tree_traversal_test)
+
+add_executable(binary_search_tree_test binary_search_tree_test.cpp)
+add_test(NAME binary_search_tree_test COMMAND binary_search_tree_test)

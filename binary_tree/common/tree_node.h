@@ -10,7 +10,7 @@ struct TreeNode : std::enable_shared_from_this<TreeNode<T>> {
   std::shared_ptr<TreeNode<T>> left_;
   std::shared_ptr<TreeNode<T>> right_;
 
-  explicit TreeNode(T v) : val_(v) {}
+  explicit TreeNode(const T& v) : val_(v) {}
 };
 
 // ===
