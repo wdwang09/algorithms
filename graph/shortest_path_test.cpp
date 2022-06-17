@@ -8,8 +8,8 @@
 #include "common/graph.h"
 
 int main() {
-  for (int t = 0; t < 50; ++t) {
-    int node_num = common::randint(0, 50);
+  for (int t = 0; t < 25; ++t) {
+    int node_num = common::randint(0, 40);
     Graph<true, unsigned> g(node_num);
     std::size_t edge_num = 0;
     for (int i = 0; i < node_num; ++i) {
@@ -51,8 +51,8 @@ int main() {
 
   // ===
 
-  for (int t = 0; t < 50; ++t) {
-    int node_num = common::randint(0, 50);
+  for (int t = 0; t < 25; ++t) {
+    int node_num = common::randint(0, 40);
     Graph<false, unsigned> g(node_num);
     std::size_t edge_num = 0;
     for (int i = 0; i < node_num; ++i) {
