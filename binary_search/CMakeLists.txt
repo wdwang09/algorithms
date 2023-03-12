@@ -1,0 +1,2 @@
+add_executable(binary_search_test binary_search_test.cpp)
+add_test(NAME binary_search_test COMMAND binary_search_test)
