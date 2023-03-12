@@ -14,6 +14,7 @@ include_directories(common)
 
 add_subdirectory(binary_search)
 add_subdirectory(binary_tree)
+add_subdirectory(data_structure)
 add_subdirectory(disjoint_set)
 add_subdirectory(graph)
 add_subdirectory(priority_queue)
